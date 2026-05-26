@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": false,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node api.js && next dev",
     "build": "next build",
-    "start": "next start",
+    "db:backup": "node scripts/backup-cockpit-db.mjs",
+    "start": "node api.js && next start",
     "lint": "eslint",
     "demo:seed": "node scripts/seed_demo.cjs"
   },
